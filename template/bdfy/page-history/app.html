@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>BioLab_font - laboratory - page-history</title>
+<link rel="stylesheet" charset="utf-8" href="./app.sass.css" />
+<link rel="stylesheet" charset="utf-8" href="../iconfont/app.sass.css" />
+</head>
+<body>
+
+  <div class="BioLab_font laboratory-page-history" ng-if="inited">
+    <div class="content">
+      <div class="conLeft">
+        <p>设备列表</p>
+        <ul class="s-menu" ng-if="s_show" data-ng-init="s_load()">
+          <li class="change">曲线展示</li>
+          <li>列表展示</li>
+        </ul>
+        <ul class="menu">
+          <div id="select" ng-show="tier===1"></div>
+          <li ng-repeat="item in value.devicelist">{{item.name}}</li>
+        </ul>
+      </div>
+      <div class="conRight" data-ng-init="ready()">
+        <input type="text" id="startDate" placeholder="请选择时间" readonly class="form_datetime">
+        ～
+        <input type="text" id="endDate" placeholder="请选择时间" readonly class="form_datetime">
+        <span>* 默认为昨日数据</span>
+        <div class="itemcon" ng-repeat="item in value.devicelist" ng-if="pick===item.id">
+          <div class="curve" ng-if="s_pick===0">
+            <div class="cur-chrats" ng-repeat="show in item.show">
+              <div id="{{show}}" style="width: 500px;height:270px;" data-ng-init="load(show)" class="curves" ></div>
+            </div>
+            <div id="main3" style="width: 350px;height:300px;float: left;z-index: 9" class="curves" ></div>
+          </div>
+          <div class="list" ng-if="s_pick===1">
+            <div class="skip" ng-click="topre()" ng-if="currentpage !== 1" style="text-align: center"><img src="../static/images/top.png" width="150px" height="60px" alt=""></div>
+            <div class="table" data-ng-init="listinit()" laboratory-tablelist="tablelistCallback"></div>
+            <div class="pagenumber">第 {{currentpage}} 页/共 {{listpage}} 页</div>
+            <div class="skip" ng-click="tonext()" ng-if="currentpage !== listpage"  style="text-align: center"><img src="../static/images/bottom.png" width="150px" height="60px" alt=""></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!-- BioLab_font -->
+
+</body>
+</html>

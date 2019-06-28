@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>BioLab_font - laboratory - page-runtime</title>
+<link rel="stylesheet" charset="utf-8" href="./app.sass.css" />
+<link rel="stylesheet" charset="utf-8" href="../iconfont/app.sass.css" />
+</head>
+<body>
+
+<div class="BioLab_font laboratory-page-runtime" ng-if="inited">
+        <div class="content">
+            <div class="fl">
+                <ul>
+                    <div id="select" ng-show="tier===1" data-ng-init="ready()"></div>
+                    <li class="current">日报表</li>
+                    <li>周报表</li>
+                    <li>月报表</li>
+                    <li>年报表</li>
+                </ul>
+            </div>
+            <div class="fr" ng-if="show">
+                <div id="itemcontent">
+                    <div class="left fl">
+                        <div class="noaction" ng-if="tablelist">报表生成中</div>
+                        <img  class="toright fr" ng-click="toright()" src="../static/images/right.png">
+                        <div class="general fl">
+                            <div id="ringchart" class="ringchart" data-ng-init="ringload()"></div>
+                            <div class="exponent">
+                                <div class="value" ng-if="show === 'day'">{{lists[0].time*1000|date:'MM-dd'}}</div>
+                                <div class="value" ng-if="show === 'week'">{{lists[0].time*1000|date:'MM-dd'}}至{{ lists[6].time*1000|date:'MM-dd'}}</div>
+                                <div class="value" ng-if="show === 'month'">{{lists[0].time*1000|date:'yyyy-MM'}}</div>
+                                <div class="value" ng-if="show === 'year'">{{lists[0].time*1000|date:'yyyy'}}</div>
+                                <div>运行指数</div>
+                            </div>
+                            <div class="warnover">
+                                <div>
+                                    <img src="../static/images/swarn.png" alt="">
+                                    <span>{{count_warn?count_warn:'0'}}</span>
+                                </div>
+                                <div>
+                                    <img src="../static/images/tempwarn.png" alt="">
+                                    <span>{{count_temp_warn?count_temp_warn:'0'}}</span>
+                                </div>
+                                <div>
+                                    <img src="../static/images/prewarn.png" alt="">
+                                    <span>{{count_pre_warn?count_pre_warn:'0'}}</span>
+                                </div>
+                            </div>
+                            <div class="duration"><i>&#xe784;</i>&nbsp;&nbsp;{{run_time}}</div>
+                        </div>
+                        <div id="barchart" class="barchart fl" data-ng-init="barload()"></div>
+                    </div>
+                    <div class="right fr">
+                        <div class="noaction" ng-if="tablelist">报表生成中</div>
+                        <img  class="toleft fl" ng-click="toleft()" src="../static/images/left.png" />
+                        <div class="export" ng-click="exporttable()"><img src="../static/images/export.png" />导出</div>
+                        <div class="table fl">
+                            <div>
+                                <img ng-if="page !== 1" class="top" ng-click="up()" src="../static/images/top.png" />
+                            </div>
+                            <table  border="1">
+                                <thead>
+                                <tr>
+                                    <th>设备名称</th>
+                                    <th>环境温度</th>
+                                    <th>罐体温度</th>
+                                    <th>压力</th>
+                                    <th>时间</th>
+                                    <th>报警(次)</th>
+                                    <th>湿度</th>
+                                    <th>液位</th>
+                                    <th>储液重量</th>
+                                    <th>充装(次)</th>
+                                    <th>放散(次)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr ng-repeat="r in runlist">
+                                    <td>{{r.name}}</td>
+                                    <td>{{r.temp2}}</td>
+                                    <td>{{r.temp1}}</td>
+                                    <td>{{r.pressure}}</td>
+                                    <td>{{r.time*1000 | date:'yy-MM-dd HH:mm:ss'}}</td>
+                                    <td>{{r.warn}}</td>
+                                    <td>{{r.humidity}}</td>
+                                    <td>{{r.height}}</td>
+                                    <td>{{r.weight}}</td>
+                                    <td>{{r.pump}}</td>
+                                    <td>{{r.release}}</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <p style="float: right">共{{ceils}}页，当前第{{page}}页</p>
+                            <div>
+                                <img ng-if="page !== ceils&&ceils !==0" class="bottom" ng-click="down()" src="../static/images/bottom.png" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div><!-- BioLab_font -->
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>front - laboratory - header</title>
+<link rel="stylesheet" charset="utf-8" href="./app.sass.css" />
+<link rel="stylesheet" charset="utf-8" href="../iconfont/app.sass.css" />
+</head>
+<body>
+
+  <div class="front laboratory-header" ng-if="inited" data-ng-init="ready()">
+    <div class="navbar">
+      <ul>
+        <li id="overview">数据总览</li>
+        <li id="realtime">实时数据</li>
+        <li id="history">历史数据</li>
+        <li id="runtime">运行报表</li>
+        <li id="warning">报警历史</li>
+        <li id="setting">设备配置</li>
+      </ul>
+    </div>
+    <div class="title" ng-bind="title">{{title}}</div>
+    <div class="time"><img src="../static/images/time.png" alt="">&nbsp;{{nowtime | date: 'yyyy-MM-dd HH:mm:ss'}}</div>
+    <img src="../static/images/logo.png" alt="">
+  </div><!-- front -->
+
+</body>
+</html>

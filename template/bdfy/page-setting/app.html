@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>BioLab_font - laboratory - page-setting</title>
+<link rel="stylesheet" charset="utf-8" href="./app.sass.css" />
+<link rel="stylesheet" charset="utf-8" href="../iconfont/app.sass.css" />
+</head>
+<body>
+
+    <div class="BioLab_font laboratory-page-setting" ng-if="inited">
+        <div class="content">
+            <div class="fl">
+                <ul class="menu">
+                    <div ng-show="tier===1" id="select"></div>
+                    <li ng-repeat="item in value.devicelist">{{item.name}}</li>
+                    <li>系统设置</li>
+                </ul>
+            </div>
+            <div class="fr">
+                <div class="setContent" ng-repeat="item in value.devicelist" id="{{item.id}}" ng-if="pick===item.id" data-ng-init="initcon(item)">
+                    <div ng-repeat="items in attlist">
+                        <span class="name">{{items.name}}</span>
+                        <input class="{{items.code}}" type="text" value="{{items.value}}" />
+                        <span class="unit" style="color: #fff">{{items.unit}}</span>
+                        <span class="synchro" style="color: #f00">{{items.edit === 1?'同步中':''}}</span>
+                    </div>
+                    <div>
+                        <span class="name"></span>
+                        <input class="btn btn-primary" type="button" value="确认" ng-click="submitatt()">
+                        <span class="error" style="color: #ff0000">{{error}}</span>
+                    </div>
+                </div>
+                <div class="setContent" id="system" ng-if="pick===18" data-ng-init="configs()">
+                    <table>
+                        <tr>
+                            <td style="text-align: center;width: 60px;">IP</td>
+                            <td><div style="width:750px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;padding-left: 10px">{{ip}}</div></td>
+                            <td style="padding: 0" ng-if="userType === 'admin'"><input class="btn" ng-click="updateoption($index)" style="width: 60px;cursor: pointer" type="button" value="修改"></td>
+                        </tr>
+                    </table>
+                    <div>
+                        <input id="version" class="btn btn-block btn-info" type="button" style="margin-bottom: 20px;display: inline-block" ng-click="upload()" value="版本更新"><span>{{version}}</span>
+                        <input id="logout" class="btn btn-block btn-danger" type="button" ng-click="logout()" value="退出登录">
+                    </div>
+                    <div class="updateversion" ng-if="updateversion">
+                        <img src="../static/images/loading.png" alt="">
+                        <p>正在更新... 几分钟后完成自动重启</p>
+                    </div>
+                    <div class="updateoption" ng-if="showupdate">
+                        <div style="color: #000;">IP:</div>
+                        <div>
+                            <input autofocus class="value" type="text" value="{{ip}}">
+                        </div>
+                        <div>
+                            <input type="button" class="btn btn-primary" ng-click="commit()" value="确认">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="keyboard" laboratory-keyboard="keyboardCallback" ng-if="keyboard"></div>
+    </div><!-- BioLab_font -->
+
+</body>
+</html>

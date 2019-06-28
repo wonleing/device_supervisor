@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+  <link rel="stylesheet" charset="utf-8" href="/static/css/overview.css" />
+  <div class="content">
+    <table class='list_table'>
+      <th>设备ID</th><th>重量</th><th>高度</th><th>压力</th><th>温度</th><th>开关</th><th>报警</th>
+      {% for d in rows %}
+        <tr>
+          <td><a href="detail?device_id={{d[0]}}">{{d[0]}}</a></td>
+          <td>{{d[1]}}</td>
+          <td>{{d[2]}}</td>
+          <td>{{d[3]}}</td>
+          <td>{{d[4]}}</td>
+          <td>{{d[5]}}</td>
+          <td>{{d[6]}}</td>
+        </tr>
+      {% end %}
+    </table>
+  </div>
+{% end %}

@@ -1,0 +1,45 @@
+body, dd, dl, fieldset, form, h1, h2, h3, h4, h5, h6, input, legend, ol, p, select, td, textarea, th, ul { margin: 0; padding: 0; border: 0; }
+
+html { overflow-x: hidden; overflow-y: visible; -ms-overflow-style: none; overflow: -moz-scrollbars-none; }
+
+html::-webkit-scrollbar { display: none; }
+
+li, ul { list-style: none; }
+
+a { color: white; }
+
+a:link { text-decoration: none; }
+
+a:visited { text-decoration: none; color: #0052D9; }
+
+a:hover { text-decoration: none; }
+
+a:active { text-decoration: none; color: #0052D9; }
+
+.layout:after, .hd:after, .bd:after, .ft:after, .cf:after { content: ""; display: table; clear: both; }
+
+.layout, .hd, .bd, .ft, .cf { *zoom: 1; }
+
+.layout { margin: 0 auto; width: 1000px; }
+
+.fl { float: left; }
+
+.fr { float: right; }
+
+.mt20 { margin-top: 20px; }
+
+.mt30 { margin-top: 30px; }
+
+img { border: none; }
+
+@font-face { font-family: 'iconfont'; src: url("//at.alicdn.com/t/font_868281_01w9isfeyi2n.eot"); src: url("//at.alicdn.com/t/font_868281_01w9isfeyi2n.eot?#iefix") format("embedded-opentype"), url("//at.alicdn.com/t/font_868281_01w9isfeyi2n.woff") format("woff"), url("//at.alicdn.com/t/font_868281_01w9isfeyi2n.ttf") format("truetype"), url("//at.alicdn.com/t/font_868281_01w9isfeyi2n.svg#iconfont") format("svg"); }
+
+.BioLab_font.laboratory-tablelist { box-sizing: border-box; height: 450px; }
+
+.BioLab_font.laboratory-tablelist > .table { margin-bottom: 0; background: transparent; }
+
+.BioLab_font.laboratory-tablelist > .table > table { width: 100%; border: 5px solid #fff; border-collapse: collapse; box-sizing: border-box; }
+
+.BioLab_font.laboratory-tablelist > .table > table > thead > tr > th { font-size: 25px; text-align: center; padding: 5px; font-weight: normal; user-select: none; -webkit-user-select: none; box-sizing: border-box; }
+
+.BioLab_font.laboratory-tablelist > .table > table > tbody > tr > td { font-size: 18px; padding: 5px; text-align: center; box-sizing: border-box; }

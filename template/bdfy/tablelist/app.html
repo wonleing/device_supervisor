@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>BioLab_font - laboratory - tablelist</title>
+<link rel="stylesheet" charset="utf-8" href="./app.sass.css" />
+<link rel="stylesheet" charset="utf-8" href="../iconfont/app.sass.css" />
+    <script src="../page-history/app.js"></script>
+</head>
+<body>
+  <div class="BioLab_font laboratory-tablelist" ng-if="inited">
+    <div class="table">
+      <table border="1">
+        <thead>
+          <tr>
+            <th ng-repeat="head in header track by $index">{{head}}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="items in body track by $index">
+            <td ng-repeat="item in items track by $index">{{item}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div><!-- BioLab_font -->
+
+</body>
+</html>

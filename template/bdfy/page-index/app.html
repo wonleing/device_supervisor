@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>front - laboratory - page-index</title>
+<link rel="stylesheet" charset="utf-8" href="./app.sass.css" />
+<link rel="stylesheet" charset="utf-8" href="../iconfont/app.sass.css" />
+</head>
+<body>
+
+  <div class="front laboratory-page-index" ng-if="inited" ng-switch="show" data-ng-init="ready()">
+    <div laboratory-header="headerCallback"></div>
+    <div laboratory-page-overview="overviewCallback" ng-switch-when="1"></div>
+    <div laboratory-page-realtime="realtimeCallback" ng-switch-when="2"></div>
+    <div laboratory-page-history="historyCallback" ng-switch-when="3"></div>
+    <div laboratory-page-runtime="runtimeCallback" ng-switch-when="4"></div>
+    <div laboratory-page-warning="warningCallback" ng-switch-when="5"></div>
+    <div laboratory-page-setting="settingCallback" ng-switch-when="6"></div>
+    <div laboratory-footer="footerCallback"></div>
+    <div class="into" ng-show="into" >
+      <div class="content">
+          <div class="remind">温馨提醒</div>
+          <div class="warnAction">
+              <div class="name">
+                  <div class="alert alert-danger" ><p ng-repeat=" w in warn">当前{{w.name}},正在发生{{w.content}}报警，请及时处理。</p></div>
+                  <audio id="audio" src="http://ydown.smzy.com/yinpin/2016-6/smzy_2016062205.mp3"  loop  hidden="false"></audio>
+              </div>
+          </div>
+          <div class="action">
+              <button id="btn1" type="button" class="btn btn-success" ng-class="curt===1?'current_style':' '" ng-click="submit()">忽略</button>
+              <button id="btn2" type="button" class="btn btn-primary" ng-class="curt===2?'current_style':' '" ng-click="cancel()">查看</button>
+          </div>
+      </div>
+      <div class="cover2"></div>
+    </div>
+    <div id="shade" laboratory-rebooter="rebooterCallback" ng-if="masking"></div>
+  </div><!-- front -->
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+body, dd, dl, fieldset, form, h1, h2, h3, h4, h5, h6, input, legend, ol, p, select, td, textarea, th, ul { margin: 0; padding: 0; border: 0; }
+
+html { overflow-x: hidden; overflow-y: visible; -ms-overflow-style: none; overflow: -moz-scrollbars-none; }
+
+html::-webkit-scrollbar { display: none; }
+
+li, ul { list-style: none; }
+
+a { color: white; }
+
+a:link { text-decoration: none; }
+
+a:visited { text-decoration: none; color: #0052D9; }
+
+a:hover { text-decoration: none; }
+
+a:active { text-decoration: none; color: #0052D9; }
+
+.layout:after, .hd:after, .bd:after, .ft:after, .cf:after { content: ""; display: table; clear: both; }
+
+.layout, .hd, .bd, .ft, .cf { *zoom: 1; }
+
+.layout { margin: 0 auto; width: 1000px; }
+
+.fl { float: left; }
+
+.fr { float: right; }
+
+.mt20 { margin-top: 20px; }
+
+.mt30 { margin-top: 30px; }
+
+img { border: none; }
+
+.front.laboratory-page-login { box-sizing: border-box; width: 1360px; height: 768px; position: relative; }
+
+.front.laboratory-page-login > img { position: absolute; top: 0; left: 0; z-index: -10; width: 1360px; height: 768px; }
+
+.front.laboratory-page-login .logo { padding: 15px; height: 90px; }
+
+.front.laboratory-page-login .logo img { height: 100%; }
+
+.front.laboratory-page-login .logo div { vertical-align: top; margin: 14px 0; display: inline-block; color: #ffffff; text-align: center; }
+
+.front.laboratory-page-login .logo div .name { font-size: 36px; display: block; }
+
+.front.laboratory-page-login .logo div .en-name { font-size: 18px; display: block; }
+
+.front.laboratory-page-login .login { width: 500px; height: 520px; position: absolute; right: 40px; top: 100px; }
+
+.front.laboratory-page-login .login .title { text-align: center; font-size: 38px; color: #ffffff; }
+
+.front.laboratory-page-login .login .form { margin: 50px 20px; padding: 60px 30px 70px; background: rgba(255, 255, 255, 0.6); border-radius: 10px; overflow: hidden; }
+
+.front.laboratory-page-login .login .form .left { width: 80px; text-align: center; font-size: 24px; font-weight: bold; }
+
+.front.laboratory-page-login .login .form .left div { line-height: 60px; }
+
+.front.laboratory-page-login .login .form .left div:nth-of-type(2) { margin-top: 20px; }
+
+.front.laboratory-page-login .login .form .right { width: 300px; position: relative; z-index: 5; }
+
+.front.laboratory-page-login .login .form .right #select { position: absolute; top: -2px; left: -2px; z-index: -1; width: 300px; height: 60px; border: 2px solid #1e90ff; }
+
+.front.laboratory-page-login .login .form .right .username { background: #ffffff; box-sizing: border-box; padding-left: 5px; width: 100%; height: 60px; border-radius: 10px; font-size: 20px; color: #6a6f77; }
+
+.front.laboratory-page-login .login .form .right .password { box-sizing: border-box; padding-left: 5px; margin: 20px 0; width: 100%; height: 60px; border-radius: 10px; font-size: 20px; color: #6a6f77; }
+
+.front.laboratory-page-login .login .form .right #login { color: #ffffff; font-weight: bold; font-size: 24px; border-radius: 10px; text-align: center; background: #0075a9; line-height: 60px; cursor: pointer; }
+
+.front.laboratory-page-login .login .form .right #login:hover { opacity: 0.8; }
+
+.front.laboratory-page-login .login .form .right .error { position: absolute; bottom: -40px; left: 0; color: #f00; font-size: 20px; }
+
+.front.laboratory-page-login #keyboard { position: absolute; top: 110px; left: 10px; }
+
+.front.laboratory-page-login #shade { position: absolute; top: 0; left: 0; z-index: 99; }

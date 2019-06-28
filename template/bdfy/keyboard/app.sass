@@ -1,0 +1,124 @@
+@import '../../common/common/app'
+@import '../common/app'
+
+.front.laboratory-keyboard
+    box-sizing: border-box
+    width: 340px
+    height: 520px
+
+    color: white
+    margin: 50px
+    border: 5px solid #c8cbcf
+    border-radius: 10px
+    position: relative
+    .backimage
+        width: 330px
+        height: 510px
+        z-index: -2
+        position: absolute
+        top: 0
+        left: 0
+    input
+        color: white
+        font-size: 30px
+        width: 320px
+        height: 60px
+        padding: 5px
+        box-sizing: border-box
+        margin: 5px
+        border-bottom: 1px solid #ffffff
+        background: rgba(0,0,0,0)
+    >div
+        position: absolute
+        z-index: 1
+        top: 0
+        right: 5px
+        color: red
+        line-height: 60px
+        font-size: 20px
+    ul
+        width: 330px
+        height: 440px
+        position: relative
+        >div
+            width: 120px
+            height: 120px
+            box-sizing: border-box
+            border: 2px solid #1e90ff
+            border-radius: 50%
+            background: #4e555b
+            position: absolute
+            top: -10px
+            left: -10px
+            div
+                border-radius: 50%
+            div:nth-of-type(1)
+                position: absolute
+                width: 40px
+                height: 40px
+                background: #1e90ff
+                top: 50%
+                left: 50%
+                transform: translateX(-50%) translateY(-50%)
+                line-height: 40px
+                text-align: center
+                font-size: 26px
+            div:hover
+                background: #1e90ff
+            div:nth-of-type(2)
+                position: absolute
+                width: 40px
+                height: 40px
+                left: 0
+                top: 50%
+                transform: translateY(-50%)
+                line-height: 40px
+                text-align: center
+                font-size: 26px
+            div:nth-of-type(3)
+                position: absolute
+                width: 40px
+                height: 40px
+                left: 50%
+                top: 0
+                transform: translateX(-50%)
+                line-height: 40px
+                text-align: center
+                font-size: 26px
+            div:nth-of-type(4)
+                position: absolute
+                width: 40px
+                height: 40px
+                right: 0
+                top: 50%
+                transform: translateY(-50%)
+                line-height: 40px
+                text-align: center
+                font-size: 26px
+            div:nth-of-type(5)
+                position: absolute
+                width: 40px
+                height: 40px
+                left: 50%
+                bottom: 0
+                transform: translateX(-50%)
+                line-height: 40px
+                text-align: center
+                font-size: 26px
+        li
+            font-size: 28px
+            float: left
+            width: 100px
+            height: 100px
+            text-align: center
+            border-radius: 50%
+            margin: 5px
+            cursor: pointer
+            span
+                display: block
+            span:nth-of-type(1)
+                line-height: 50px
+            span:nth-of-type(2)
+                font-size: 20px
+        li.current
+            background: #4e555b

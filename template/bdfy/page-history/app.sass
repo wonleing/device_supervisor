@@ -1,0 +1,130 @@
+@import '../../common/common/app'
+@import '../common/app'
+
+.BioLab_font.laboratory-page-history
+    box-sizing: border-box
+    width: 1360px
+    height: 608px
+    background: #0d2a42
+    color: #fff
+    > .content
+      height: 608px
+      margin: 0 10px
+      > .conLeft
+        width: 15%
+        height: 100%
+        float: left
+        font-size: 20px
+        border: 2px #fff solid
+        position: relative
+        box-sizing: border-box
+        > p
+          text-align: center
+          height: 45px
+          line-height: 45px
+          border-bottom: 2px #fff solid
+          box-sizing: border-box
+        >.s-menu
+          position: absolute
+          width: 100%
+          top: 45px
+          left: 100%
+          z-index: 99
+          background: #09305f
+          >li
+            text-align: center
+            line-height: 54px
+            color: #8a8a8a
+            position: relative
+            margin: 3px 3px
+            cursor: pointer
+          > .change
+            height: 54px
+            color: #fff
+            border-radius: 10px
+        > ul::-webkit-scrollbar
+          display: none
+        > .menu
+          width: 100%
+          height: 559px
+          position: relative
+          overflow-y: scroll
+          z-index: 5
+          >div
+            box-sizing: border-box
+            width: 100%
+            height: 60px
+            top: 0
+            left: 0
+            border: 3px solid #1e90ff
+            position: absolute
+            border-radius: 10px
+            z-index: -1
+          > li
+            text-align: center
+            line-height: 54px
+            color: #8a8a8a
+            position: relative
+            margin: 3px 3px
+            cursor: pointer
+          > .change
+            height: 54px
+            color: #fff
+            background: #09305f
+            border-radius: 10px
+            font-size: 24px
+      > .conRight
+        width: 1080px
+        float: left
+        height: 100%
+        margin-left: 20px
+        position: relative
+        >input
+          cursor: pointer
+          width: 10.6rem
+          margin-bottom: 0
+          padding: 5px
+          outline: none
+          border: 2px solid #fff
+          background: #0d2a42
+          color: #fff
+        >input:focus
+          border: 2px solid #1e90ff
+        >span
+          font-size: 20px
+          padding: 5px
+          color: #e0cf6d
+        >.itemcon
+          > .curve
+            > .cur-chrats
+              float: left
+              width: 500px
+              > p
+                float: right
+                font-size: 30px
+                width: 200px
+                margin-right: 10px
+                > span
+                  color: #fff603
+                  margin-left: 12px
+          >.list
+            position: relative
+            >.table
+              padding: 60px 0
+            >.skip
+              position: absolute
+              cursor: pointer
+            >.skip:nth-of-type(1)
+              left: 50%
+              top: 0
+              transform: translateX(-50%)
+            >.skip:nth-last-child(1)
+              left: 50%
+              bottom: 0
+              transform: translateX(-50%)
+            >.pagenumber
+              z-index: auto
+              font-size: 18px
+              position: absolute
+              right: 10px
+              bottom: 45px

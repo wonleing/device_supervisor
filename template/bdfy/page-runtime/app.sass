@@ -1,0 +1,218 @@
+@import '../../common/common/app'
+@import '../common/app'
+
+@keyframes shake
+    from
+        transform: scale(1)
+    50%
+        transform: scale(0.8)
+    to
+        transform: scale(1)
+
+.BioLab_font.laboratory-page-runtime
+    box-sizing: border-box
+    width: 1360px
+    height: 608px
+    background: #0d2a42
+    .content
+        margin: 0 10px
+        height: 608px
+        >.fl
+            box-sizing: border-box
+            width: 15%
+            height: 100%
+            border: 3px solid #fff
+            ul
+                position: relative
+                z-index: 5
+                >div
+                    box-sizing: border-box
+                    width: 100%
+                    height: 60px
+                    top: -3px
+                    left: 0
+                    border: 3px solid #1e90ff
+                    position: absolute
+                    border-radius: 10px
+                    z-index: -1
+                >li
+                    position: relative
+                    text-align: center
+                    margin: 40px 3px
+                    line-height: 54px
+                    font-size: 30px
+                    color: #696969
+                    border-radius: 10px
+                    cursor: pointer
+                .current
+                    color: white
+                    background: #09305f
+        >.fr
+            box-sizing: border-box
+            width: 85%
+            height: 100%
+            overflow: hidden
+            position: relative
+            >div
+                width: 200%
+                height: 100%
+                box-sizing: border-box
+                position: absolute
+                .left
+                    box-sizing: border-box
+                    padding: 0 10px
+                    width: 50%
+                    height: 100%
+                    .toright
+                        box-sizing: border-box
+                        width: 3%
+                        height: 16%
+                        margin-top: 20%
+                        background-repeat: no-repeat
+                        animation: shake 2s infinite
+                    .general
+                        box-sizing: border-box
+                        width: 27%
+                        height: 100%
+                        .ringchart
+                            width: 100%
+                            height: 210px
+                        .exponent
+                            margin-top: 20px
+                            div
+                                line-height: 60px
+                                text-align: center
+                                font-size: 30px
+                                color: #ffffff
+                            .value
+                                display: block
+                                width: 150px
+                                margin: 0 auto
+                                color: #000
+                                font-size: 22px
+                                line-height: 35px
+                                background: #7ecef4
+                                border-radius: 5px
+                        .warnover
+                            width: 70%
+                            margin: 0 auto
+                            height: 100px
+                            div
+                                float: left
+                                width: 32%
+                                height: 100%
+                                img
+                                    display: block
+                                    margin: 5px auto
+                                span
+                                    color: white
+                                    font-size: 20px
+                                    line-height: 35px
+                                    display: block
+                                    text-align: center
+                            div:nth-of-type(2)
+                                margin: 0 2%
+                        .duration
+                            width: 65%
+                            margin: 10px auto
+                            font-size: 30px
+                            line-height: 70px
+                            color: white
+                            i
+                                font-size: 40px
+                                font-family: "iconfont" !important
+                                font-style: normal
+                                -webkit-font-smoothing: antialiased
+                                -webkit-text-stroke-width: 0.2px
+                                -moz-osx-font-smoothing: grayscale
+                    .barchart
+                        box-sizing: border-box
+                        width: 68%
+                        height: 100%
+                    > .noaction
+                        position: absolute
+                        width: 50%
+                        height: 100%
+                        z-index: 10
+                        top: 0
+                        left: 0
+                        text-align: center
+                        font-size: 50px
+                        line-height: 500px
+                        color: rgb(161, 161, 161)
+                        background: #0d2a42
+                .right
+                    box-sizing: border-box
+                    padding: 20px 10px
+                    width: 50%
+                    height: 100%
+                    position: relative
+                    .toleft
+                        box-sizing: border-box
+                        width: 3%
+                        height: 16%
+                        margin-top: 20%
+                        background-repeat: no-repeat
+                        animation: shake 2s infinite
+                    .export
+                        position: absolute
+                        top: 50%
+                        right: 0
+                        transform: translateY(-50%)
+                        box-sizing: border-box
+                        width: 5%
+                        height: 80px
+                        text-align: center
+                        font-size: 27px
+                        color: white
+                        background-position: top center
+                        background-repeat: no-repeat
+                    .table
+                        box-sizing: border-box
+                        width: 90%
+                        height: 100%
+                        color: #fff
+                        margin-left: 10px
+                        > table
+                            width: 100%
+                            border: 2px solid #fff
+                            border-collapse: collapse
+                            > thead > tr > th
+                                text-align: center
+                                padding: 5px
+                                border: 2px solid #fff
+                                font-weight: normal
+                                user-select: none
+                                -webkit-user-select: none
+                            > tbody > tr > td
+                                padding: 5px
+                                border: 2px solid #fff
+                                text-align: center
+                        > div
+                            height: 40px
+                            > .bottom
+                                box-sizing: border-box
+                                width: 8%
+                                height: 100%
+                                animation: shake 2s infinite
+                                text-align: center
+                                margin-left: 45%
+                            > .top
+                                box-sizing: border-box
+                                width: 8%
+                                height: 100%
+                                animation: shake 2s infinite
+                                text-align: center
+                                margin-left: 45%
+                    > .noaction
+                        position: absolute
+                        width: 100%
+                        height: 100%
+                        z-index: 10
+                        top: 0
+                        left: 0
+                        text-align: center
+                        font-size: 50px
+                        line-height: 500px
+                        color: rgb(161, 161, 161)
+                        background: #0d2a42

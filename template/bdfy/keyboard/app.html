@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>front - laboratory - keyboard</title>
+<link rel="stylesheet" charset="utf-8" href="./app.sass.css" />
+<link rel="stylesheet" charset="utf-8" href="../iconfont/app.sass.css" />
+</head>
+<body>
+
+  <div class="front laboratory-keyboard" ng-if="inited" data-ng-init="load()">
+      <img src="../static/images/keji.jpg" class="backimage" />
+      <input type="{{type==='password'?'password':'text'}}" value="{{text}}" placeholder="{{type==='number'?'此值范围为'+min+'～'+max:''}}">
+      <ul>
+          <li><span>1</span></li>
+          <li><span>2</span><span ng-if="!upper">a b c</span><span ng-if="upper">A B C</span></li>
+          <li><span>3</span><span ng-if="!upper">d e f</span><span ng-if="upper">D E F</span></li>
+          <li><span>4</span><span ng-if="!upper">g h i</span><span ng-if="upper">G H I</span></li>
+          <li><span>5</span><span ng-if="!upper">j k l</span><span ng-if="upper">J K L</span></li>
+          <li><span>6</span><span ng-if="!upper">m n o</span><span ng-if="upper">M N O</span></li>
+          <li><span>7</span><span ng-if="!upper">p q r s</span><span ng-if="upper">P Q R S</span></li>
+          <li><span>8</span><span ng-if="!upper">t u v</span><span ng-if="upper">T U V</span></li>
+          <li><span>9</span><span ng-if="!upper">w x y z</span><span ng-if="upper">W X Y Z</span></li>
+          <li><span><img src="../static/images/comfirm.png" alt=""></span><span>确认</span></li>
+          <li><span>0</span><span>. -</span></li>
+          <li><span><img src="../static/images/back.png" alt=""></span><span>退格</span></li>
+          <div id="pickkey" ng-show="pick">
+              <div ng-repeat="item in keyitems">{{item}}</div>
+          </div>
+      </ul>
+      <div ng-if="error">输入不规则</div>
+  </div><!-- front -->
+
+</body>
+</html>

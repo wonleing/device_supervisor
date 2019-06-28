@@ -1,0 +1,17 @@
+@font-face { font-family: 'iconfont-front-laboratory'; src: url("//at.alicdn.com/t/font_.eot"); src: url("//at.alicdn.com/t/font_.eot?#iefix") format("embedded-opentype"), url("//at.alicdn.com/t/font_.woff") format("woff"), url("//at.alicdn.com/t/font_.ttf") format("truetype"), url("//at.alicdn.com/t/font_.svg#iconfont") format("svg"); }
+
+.iconfont-front-laboratorys { font-family: "iconfont-front-laboratory"; font-size: 18px; font-style: normal; height: auto; -webkit-font-smoothing: antialiased; }
+
+@keyframes iconfont-front-laboratory-loading-animate { 0% { transform: rotate(0deg);
+    -webkit-text-replace: rotate(0deg); }
+  100% { transform: rotate(360deg);
+    -webkit-text-replace: rotate(360deg); } }
+
+@-webkit-keyframes iconfont-front-laboratory-loading-animate { 0% { transform: rotate(0deg);
+    -webkit-text-replace: rotate(0deg); }
+  100% { transform: rotate(360deg);
+    -webkit-text-replace: rotate(360deg); } }
+
+.iconfont-front-laboratory-loading { color: #0184b7; animation: 0.5s linear infinite iconfont-front-laboratory-loading-animation; -webkit-animation: 0.5s linear infinite iconfont-front-laboratory-loading-animation; }
+
+.iconfont-front-laboratory-loading:before { content: "\\e647"; }

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>BioLab_font - laboratory - page-realtime</title>
+<link rel="stylesheet" charset="utf-8" href="./app.sass.css" />
+<link rel="stylesheet" charset="utf-8" href="../iconfont/app.sass.css" />
+</head>
+<body>
+
+<div class="BioLab_font laboratory-page-realtime" ng-if="inited">
+  <div class="content">
+    <div class="conLeft">
+      <p>设备列表</p>
+      <ul class="menu">
+        <div id="select" ng-show="tier===1"></div>
+        <li ng-repeat="item in value.devicelist">{{item.name}}</li>
+      </ul>
+    </div>
+    <div class="conRight">
+      <div class="offline" ng-if="isoffline">该设备已离线</div>
+      <div class="div" ng-repeat="page in value.devicelist" id="cons{{page.id}}" ng-if="pick===page.id">
+        <div class="con">
+          <div ng-repeat="show in page.show" id="{{show}}" style="width: 750px;height:300px;" class="curve" data-ng-init="charts(page,show)"></div>
+        </div>
+        <div class="right" >
+          <p ng-if="page.type==='small'||page.type==='tower'||page.type==='swg'">充装状态:<span>{{valve===0?'未充装':'充装中'}}</span></p>
+          <p ng-if="page.type==='small'&&lid!==''">盖子状态:<span>{{lid===0?'关':'开'}}</span></p>
+          <img ng-if="valve===0&&page.type==='small'&&lid===1" src="../static/images/kai.png"/>
+          <img ng-if="valve===1&&page.type==='small'&&lid===0" src="../static/images/chong.png"/>
+          <img ng-if="valve===0&&page.type==='small'&&lid===0" src="../static/images/smaillshut.png"/>
+          <img ng-if="valve===1&&page.type==='swg'" src="../static/images/bigguan.png"/>
+          <img ng-if="valve===0&&page.type==='swg'" src="../static/images/bigshut.png"/>
+          <img ng-if="page.type==='tower'" src="../static/images/ye.png"/>
+          <img ng-if="page.type==='ice'" style="margin-top: 100px;" src="../static/images/bing.png"/>
+          <img ng-if="page.type==='conduit'" style="margin-top: 100px;" src="../static/images/guan.png"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- BioLab_font -->
+
+</body>
+</html>

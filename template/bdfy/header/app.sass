@@ -1,0 +1,46 @@
+@import '../../common/common/app'
+@import '../common/app'
+
+.front.laboratory-header
+  box-sizing: border-box
+  height: 100px
+  color: #ffffff
+  position: relative
+  .navbar
+    position: absolute
+    top: 50%
+    transform: translateY(-30%)
+    display: inline-block
+    overflow: hidden
+    ul
+      li
+        margin: 5px
+        font-size: 20px
+        font-weight: bold
+        float: left
+        cursor: pointer
+      .current
+        color: #0cd5b4
+        padding-bottom: 5px
+        transform: translateY(-5px)
+      .tier
+        border-bottom: 5px solid #0cd5b4
+  .title
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translateX(-50%) translateY(-50%)
+    color: #0cd5b4
+    font-size: 45px
+    font-weight: bold
+  .time
+    position: absolute
+    top: 30px
+    right: 160px
+    font-size: 32px
+  >img
+    z-index: 10
+    position: absolute
+    top: 5px
+    right: 10px
+    height: 100%

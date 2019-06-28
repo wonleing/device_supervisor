@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>{{projectname}}</title>
+<link rel="stylesheet" charset="utf-8" href="/static/css/iconfont.css" />
+<link rel="stylesheet" charset="utf-8" href="/static/css/header.css" />
+<link rel="stylesheet" charset="utf-8" href="/static/css/footer.css" />
+</head>
+<body>
+  <div class="front laboratory-header">
+    <!--<div class="navbar">
+      <ul>
+        <li id="overview">数据总览</li>
+        <li id="realtime">实时数据</li>
+        <li id="history">历史数据</li>
+        <li id="runtime">运行报表</li>
+        <li id="warning">报警历史</li>
+        <li id="setting">设备配置</li>
+      </ul>
+    </div>-->
+    <div class="title">{{projectname}}</div>
+    <img src="/static/images/logo.png" alt="">
+  </div>
+  {% block content %}{% end %}
+  <div class="front laboratory-footer">
+    <div class="fl"><img src="/static/images/bg-1.gif" width="100%"></div>
+    <marquee behavior="scroll">思科德科技提醒您，当前有{{warnnu}}个设备状态异常</marquee>
+    <div class="fr"><img src="/static/images/bg-1.gif" width="100%"></div>
+  </div>
+</body>
+</html>

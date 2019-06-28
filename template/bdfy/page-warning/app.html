@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+<meta charset="utf-8" />
+<title>BioLab_font - laboratory - page-warning</title>
+<link rel="stylesheet" charset="utf-8" href="./app.sass.css" />
+<link rel="stylesheet" charset="utf-8" href="../iconfont/app.sass.css" />
+</head>
+<body>
+
+  <div class="BioLab_font laboratory-page-warning" ng-if="inited">
+    <div class="warn">
+      <div class="show">
+        <p ng-if="warn.length === 0" style="font-size: 40px;line-height: 120px;margin-left: 20px;">当前所有设备一切运行正常!</p>
+        <img ng-if="warn.length !== 0" src="../static/images/warn.gif" class="lamp" />
+        <div class="walist">
+          <div ng-if="warn.length !== 0" id="select"></div>
+          <dl class="action" ng-repeat="w in warn" ng-init="ready()">
+            <dt>{{w.name}}</dt>
+            <dd><marquee class="scroll">{{w.content}}</marquee></dd>
+          </dl>
+        </div>
+        <div class="export" ng-click="browseFolder()"><img src="../static/images/export.png" />导出</div>
+      </div>
+      <div class="record">
+        <div class="table">
+          <img ng-if="page !== 1&&page !== 0" class="top" ng-click="up()" src="../static/images/top.png" />
+          <table  border="1" name="path" id="path">
+            <thead>
+            <tr>
+              <th>ID</th>
+              <th>设备名称</th>
+              <th>报警内容</th>
+              <th>开始时间</th>
+              <th>结束时间</th>
+              <th>状态</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="n in warnList">
+              <td>{{n.id}}</td>
+              <td>{{n.name}}</td>
+              <td>{{n.content}}</td>
+              <td>{{n.create*1000 |date:'yyyy-MM-dd HH:mm:ss'}}</td>
+              <td>{{n.time*1000 |date:'yyyy-MM-dd HH:mm:ss'}}</td>
+              <td>{{n.status === 'untreated'? '未处理': (n.status === 'posed'? '已处理' : '忽略')}}</td>
+            </tr>
+            </tbody>
+          </table>
+          <p style="float: right;margin: 3px">共{{ceils}}页，当前第{{page}}页</p>
+          <img class="bottom"  ng-if="page !== ceils&&ceils !== 1" ng-click="down()" src="../static/images/bottom.png" />
+        </div>
+      </div>
+    </div>
+  </div><!-- BioLab_font -->
+
+</body>
+</html>

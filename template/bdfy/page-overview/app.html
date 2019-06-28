@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>{{projectname}} - page-overview</title>
+<link rel="stylesheet" charset="utf-8" href="/static/css/overview.css" />
+<link rel="stylesheet" charset="utf-8" href="/static/css/iconfont.css" />
+</head>
+<body>
+
+    <div class="front laboratory-page-overview" ng-if="inited">
+        <div class="content" data-ng-init="ready()">
+            <div class="img"><img src="../static/images/bg-0.gif" width="100%" alt=""></div>
+            <div class="left fl">
+                <ul>
+                    <li class="smallitem" ng-repeat="item in value.small">
+                        <div id="S12" class="fl"></div>
+                        <div class="fr">
+                            <div class="name">S12<div class="status" ng-style="{background:item.data.color}" ></div></div>
+                            <div class="value">液位: <span class="number timer">58</span> mm</div>
+                            <div class="value">充装状态: <span class="string">'充装中'</span></div>
+                            <div class="value">罐口温度: <span class="number timer">'30'</span> ℃</div>
+                            <div class="value">盖子状态: <span class="string">开</span></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="right fr">
+                <div class="pipe" ng-repeat="item in value.gd">
+                    <div class="name">T12<div class="status" ng-style="{background:item.data.color}" ></div></div>
+                    <div class="value">压力: <span class="number timer">355</span> MPa</div>
+                    <div class="value">温度: <span class="number timer">36</span> ℃</div>
+                    <div class="value">发散状态: <span class="string">'关'</span></div>
+                </div>
+                <ul>
+                    <li ng-repeat="item in value.swg">
+                        <div class="name">M233<div class="status" ng-style="{background:item.data.color}" ></div></div>
+                        <div class="value">温度: <span class="number timer">35</span> ℃</div>
+                        <div class="value">充装状态: <span class="string">'充装中'</span></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="center fl">
+                <ul>
+                    <li ng-repeat="item in value.tower">
+                        <div class="fl">
+                            <div class="Tper">83%</div>
+                            <div id="T32"></div>
+                        </div>
+                        <div class="fr">
+                            <div class="name">M32<div class="status" ng-style="{background:item.data.color}" ></div></div>
+                            <div class="value">储罐液位: <span class="number timer">356</span> mm</div>
+                            <div class="value">罐内压力: <span class="number timer">3366</span> MPa</div>
+                            <div class="value">储液重量: ～<span class="number timer">334</span> KG</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottom">
+                <ul>
+                    <li ng-repeat="item in value.bx">
+                        <div class="refrigerator">
+                            <div class="name">K55<div class="status" ng-style="{background:item.data.color}" ></div></div>
+                            <div class="value"><span class="number timer">37</span> ℃</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div><!-- front -->
+
+</body>
+</html>

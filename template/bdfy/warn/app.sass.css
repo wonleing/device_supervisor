@@ -1,0 +1,57 @@
+body, dd, dl, fieldset, form, h1, h2, h3, h4, h5, h6, input, legend, ol, p, select, td, textarea, th, ul { margin: 0; padding: 0; border: 0; }
+
+html { overflow-x: hidden; overflow-y: visible; -ms-overflow-style: none; overflow: -moz-scrollbars-none; }
+
+html::-webkit-scrollbar { display: none; }
+
+li, ul { list-style: none; }
+
+a { color: white; }
+
+a:link { text-decoration: none; }
+
+a:visited { text-decoration: none; color: #0052D9; }
+
+a:hover { text-decoration: none; }
+
+a:active { text-decoration: none; color: #0052D9; }
+
+.layout:after, .hd:after, .bd:after, .ft:after, .cf:after { content: ""; display: table; clear: both; }
+
+.layout, .hd, .bd, .ft, .cf { *zoom: 1; }
+
+.layout { margin: 0 auto; width: 1000px; }
+
+.fl { float: left; }
+
+.fr { float: right; }
+
+.mt20 { margin-top: 20px; }
+
+.mt30 { margin-top: 30px; }
+
+img { border: none; }
+
+@font-face { font-family: 'iconfont'; src: url("//at.alicdn.com/t/font_868281_01w9isfeyi2n.eot"); src: url("//at.alicdn.com/t/font_868281_01w9isfeyi2n.eot?#iefix") format("embedded-opentype"), url("//at.alicdn.com/t/font_868281_01w9isfeyi2n.woff") format("woff"), url("//at.alicdn.com/t/font_868281_01w9isfeyi2n.ttf") format("truetype"), url("//at.alicdn.com/t/font_868281_01w9isfeyi2n.svg#iconfont") format("svg"); }
+
+.BioLab_font.laboratory-warn { box-sizing: border-box; }
+
+.BioLab_font.laboratory-warn > .into > .content { border: 1px solid #ccc; width: 400px; box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2); background-color: white; font-size: 13px; color: #666; position: fixed; top: 280px; left: 50%; transform: translateX(-50%); z-index: 999999; }
+
+.BioLab_font.laboratory-warn > .into > .content > .warnAction { width: 100%; }
+
+.BioLab_font.laboratory-warn > .into > .content > .warnAction > .name { border: 1px #cccccc solid; width: 90%; padding: 10px; font-size: 16px; margin: 0 auto; }
+
+.BioLab_font.laboratory-warn > .into > .content > .warnAction > .name > p > span { margin: 5px; }
+
+.BioLab_font.laboratory-warn > .into > .content > .del { font-size: 16px; font-weight: bold; padding: 20px; }
+
+.BioLab_font.laboratory-warn > .into > .content > .action { padding: 10px; }
+
+.BioLab_font.laboratory-warn > .into > .content > .action > .btn { padding: 0 20px; line-height: 23px; background-color: #4d7ed5; color: white; border: 1px solid #4d7ed5; border-radius: 4px; font-size: 13px; display: inline-block; cursor: pointer; text-decoration: none; }
+
+.BioLab_font.laboratory-warn > .into > .content > .action > .btn.cancel { margin-left: 10px; padding: 0 20px; line-height: 23px; background-color: #eee; color: #000; border: 1px solid #ccc; border-radius: 4px; font-size: 13px; display: inline-block; cursor: pointer; text-decoration: none; }
+
+.BioLab_font.laboratory-warn > .into > .content > .action > .styles { border: 1px #f00 solid; }
+
+.BioLab_font.laboratory-warn > .into > .cover2 { width: 100%; height: 100%; background-color: #000000; position: fixed; left: 0; top: 0; z-index: 999998; opacity: 0.4; }

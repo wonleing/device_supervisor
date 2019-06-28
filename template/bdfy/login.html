@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>front - laboratory - page-login</title>
+<link rel="stylesheet" charset="utf-8" href="/static/css/login.css" />
+<link rel="stylesheet" charset="utf-8" href="/static/css/iconfont.css" />
+</head>
+<body>
+  <div class="front laboratory-page-login" ng-if="inited">
+    <img src="/static/images/login-bg.png" alt="">
+    <div class="logo">
+      <img src="/static/images/logo.png" alt="">
+      <div>
+        <span class="name">思科德科技</span>
+        <span class="en-name">SQD TECHNOLOGY</span>
+      </div>
+    </div>
+    <div class="login">
+      <div class="title">欢迎登陆{{projectname}}监控系统</div>
+      <div class="form">
+        <div class="left fl">
+          <div>用户名</div>
+          <div>密&nbsp;&nbsp;&nbsp;码</div>
+        </div>
+        <div class="right fr">
+        <form action="dologin" method="post" enctype="multipart/form-data">
+          <input name="username" class="username" type="text" placeholder="请输入用户名"/>
+          <input name="password" class="password" type="password" placeholder="请输入密码"/>
+          <input type="submit" id="login" value='&emsp;登&emsp;录&emsp;'/>
+        </form>
+        </div>
+      </div>
+    </div>
+    <div id="keyboard" laboratory-keyboard="keyboardCallback" ng-if="keyboard"></div>
+    <div id="shade" laboratory-rebooter="rebooterCallback" ng-if="masking"></div>
+  </div>
+</body>
+</html>

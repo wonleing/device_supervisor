@@ -1,0 +1,46 @@
+=font-face($code)
+    @font-face
+        font-family: 'iconfont-front-laboratory'
+        src: url('//at.alicdn.com/t/font_#{$code}.eot')
+        src: url('//at.alicdn.com/t/font_#{$code}.eot?#iefix') format('embedded-opentype'), url('//at.alicdn.com/t/font_#{$code}.woff') format('woff'), url('//at.alicdn.com/t/font_#{$code}.ttf') format('truetype'), url('//at.alicdn.com/t/font_#{$code}.svg#iconfont') format('svg')
+
++font-face('')
+
+.iconfont-front-laboratorys
+    font-family: "iconfont-front-laboratory"
+    font-size: 18px
+    font-style: normal
+    height: auto
+    -webkit-font-smoothing: antialiased
+
+
+=icon($name, $code)
+    .iconfont-front-laboratory-#{$name}:before
+        content: '#{$code}'
+
+
+@keyframes iconfont-front-laboratory-loading-animate
+    0%
+        transform: rotate(0deg)
+        -webkit-text-replace: rotate(0deg)
+    100%
+        transform: rotate(360deg)
+        -webkit-text-replace: rotate(360deg)
+
+@-webkit-keyframes iconfont-front-laboratory-loading-animate
+    0%
+        transform: rotate(0deg)
+        -webkit-text-replace: rotate(0deg)
+    100%
+        transform: rotate(360deg)
+        -webkit-text-replace: rotate(360deg)
+
+
+.iconfont-front-laboratory-loading
+    color: #0184b7
+    animation: 0.5s linear infinite iconfont-front-laboratory-loading-animation
+    -webkit-animation: 0.5s linear infinite iconfont-front-laboratory-loading-animation
+
+
++icon('loading', '\\e647')
+

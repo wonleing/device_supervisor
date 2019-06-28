@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<meta charset="utf-8" />
+<title>上报数据</title>
+</head>
+<body>
+  <table border="1" width="100%">
+    <thead>
+      {% for h in data['meta'] %}
+      <th>{{ h['name'] }}</th>
+      {% end %}
+    </thead>
+    <tbody>
+      {% for row in data['data'] %}
+      <tr>
+        {% for h in data['meta'] %}
+        <td>{{ row[h['name']] }}</td>
+        {% end %}
+      </tr>
+      {% end %}
+    </tbody>
+  </table>
+</body>
+</html>
+

@@ -1,0 +1,65 @@
+body, dd, dl, fieldset, form, h1, h2, h3, h4, h5, h6, input, legend, ol, p, select, td, textarea, th, ul { margin: 0; padding: 0; border: 0; }
+
+html { overflow-x: hidden; overflow-y: visible; -ms-overflow-style: none; overflow: -moz-scrollbars-none; }
+
+html::-webkit-scrollbar { display: none; }
+
+li, ul { list-style: none; }
+
+a { color: white; }
+
+a:link { text-decoration: none; }
+
+a:visited { text-decoration: none; color: #0052D9; }
+
+a:hover { text-decoration: none; }
+
+a:active { text-decoration: none; color: #0052D9; }
+
+.layout:after, .hd:after, .bd:after, .ft:after, .cf:after { content: ""; display: table; clear: both; }
+
+.layout, .hd, .bd, .ft, .cf { *zoom: 1; }
+
+.layout { margin: 0 auto; width: 1000px; }
+
+.fl { float: left; }
+
+.fr { float: right; }
+
+.mt20 { margin-top: 20px; }
+
+.mt30 { margin-top: 30px; }
+
+img { border: none; }
+
+.BioLab_font.laboratory-page-realtime { width: 1360px; height: 608px; box-sizing: border-box; background: #0d2a42; color: #fff; }
+
+.BioLab_font.laboratory-page-realtime > .content { height: 608px; margin: 0 10px; }
+
+.BioLab_font.laboratory-page-realtime > .content > .conLeft { width: 15%; height: 100%; float: left; font-size: 20px; border: 2px #fff solid; position: relative; box-sizing: border-box; }
+
+.BioLab_font.laboratory-page-realtime > .content > .conLeft > p { clear: both; text-align: center; height: 45px; line-height: 45px; border-bottom: 2px #fff solid; box-sizing: border-box; }
+
+.BioLab_font.laboratory-page-realtime > .content > .conLeft > ul::-webkit-scrollbar { display: none; }
+
+.BioLab_font.laboratory-page-realtime > .content > .conLeft > ul { width: 100%; height: 559px; position: relative; overflow-x: hidden; overflow-y: scroll; z-index: 5; }
+
+.BioLab_font.laboratory-page-realtime > .content > .conLeft > ul > div { box-sizing: border-box; width: 100%; height: 60px; top: 0; left: 0; border: 3px solid #1e90ff; position: absolute; border-radius: 10px; z-index: -1; }
+
+.BioLab_font.laboratory-page-realtime > .content > .conLeft > ul > li { text-align: center; line-height: 54px; color: #8a8a8a; position: relative; margin: 3px 3px; cursor: pointer; }
+
+.BioLab_font.laboratory-page-realtime > .content > .conLeft > ul > .change { height: 54px; color: #fff; background: #09305f; border-radius: 10px; font-size: 24px; }
+
+.BioLab_font.laboratory-page-realtime > .content > .conRight { width: 85%; height: 100%; float: left; overflow: hidden; position: relative; }
+
+.BioLab_font.laboratory-page-realtime > .content > .conRight > .div > .con { width: 700px; height: 550px; margin: 10px; float: left; }
+
+.BioLab_font.laboratory-page-realtime > .content > .conRight > .div > .right { padding-top: 60px; width: 370px; float: left; }
+
+.BioLab_font.laboratory-page-realtime > .content > .conRight > .div > .right > p { font-size: 36px; margin: 10px 30px; }
+
+.BioLab_font.laboratory-page-realtime > .content > .conRight > .div > .right > p > span { padding-left: 20px; color: #fff603; }
+
+.BioLab_font.laboratory-page-realtime > .content > .conRight > .div > .right > img { margin-left: 30px; }
+
+.BioLab_font.laboratory-page-realtime > .content > .conRight > .offline { position: absolute; width: 100%; height: 100%; z-index: 10; top: 0; left: 0; text-align: center; font-size: 50px; line-height: 500px; color: #a1a1a1; background: #0d2a42; }

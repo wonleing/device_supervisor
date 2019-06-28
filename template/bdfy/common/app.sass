@@ -1,0 +1,56 @@
+body, dd, dl, fieldset, form, h1, h2, h3, h4, h5, h6, input, legend, ol, p, select, td, textarea, th, ul
+  margin: 0
+  padding: 0
+  border: 0
+
+html
+  overflow-x: hidden
+  overflow-y: visible
+  -ms-overflow-style: none
+  overflow: -moz-scrollbars-none
+
+html::-webkit-scrollbar
+  display: none
+
+li, ul
+  list-style: none
+
+a
+  color: white
+  &:link
+    text-decoration: none
+  &:visited
+    text-decoration: none
+    color: #0052D9
+  &:hover
+    text-decoration: none
+  &:active
+    text-decoration: none
+    color: #0052D9
+
+.layout:after, .hd:after, .bd:after, .ft:after, .cf:after
+  content: ""
+  display: table
+  clear: both
+
+.layout, .hd, .bd, .ft, .cf
+  *zoom: 1
+
+.layout
+  margin: 0 auto
+  width: 1000px
+
+.fl
+  float: left
+
+.fr
+  float: right
+
+.mt20
+  margin-top: 20px
+
+.mt30
+  margin-top: 30px
+
+img
+  border: none

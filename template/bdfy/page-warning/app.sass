@@ -1,0 +1,121 @@
+@import '../../common/common/app'
+@import '../common/app'
+
+@keyframes shake
+  from
+    transform: scale(1)
+  50%
+    transform: scale(0.8)
+  to
+    transform: scale(1)
+.BioLab_font.laboratory-page-warning
+    box-sizing: border-box
+    width: 1360px
+    height: 608px
+    background: #0d2a42
+    color: #fff
+    > .warn
+        width: 1296px
+        height: 608px
+        border: 2px #fff solid
+        margin: 0 auto
+        > .show
+            width: 1294px
+            height: 120px
+            border-bottom: 2px #fff solid
+            position: relative
+            > .lamp
+              margin-bottom: 120px
+              display: inline-block
+            .export
+              position: absolute
+              top: 15%
+              right: 0
+              box-sizing: border-box
+              width: 5%
+              height: 80px
+              text-align: center
+              font-size: 27px
+              color: white
+
+            > .walist::-webkit-scrollbar
+                display: none
+            > .walist
+                margin-top: 5px
+                display: inline-block
+                width: 1130px
+                height: 120px
+                position: relative
+                overflow-y: hidden
+                overflow-x: visible
+                white-space: nowrap
+                z-index: 5
+                > #select
+                    box-sizing: border-box
+                    width: 307px
+                    height: 103px
+                    top: 0
+                    left: 0
+                    border: 3px solid #1e90ff
+                    position: absolute
+                    z-index: -1
+                > dl
+                  text-align: center
+                  height: 96px
+                  position: relative
+                  margin: 3px 3px
+                  cursor: pointer
+                  width: 300px
+                  border: 1px #0184b7 solid
+                  overflow: hidden
+                  display: inline-block
+                  font-size: 24px
+                  color: #fbb152
+                  > dt
+                    float: left
+                    margin-left: 15px
+                    line-height: 94px
+                  > dd
+                    margin-left: 5px
+                    float: left
+                    line-height: 94px
+                    height: 94px
+                    > .scroll
+                      width: 160px
+                      height: 94px
+        > .record
+            > .table
+                margin: 0
+                > table
+                    width: 100%
+                    border: 2px solid #fff
+                    border-collapse: collapse
+                    > thead > tr > th
+                        text-align: center
+                        padding: 5px
+                        border: 2px solid #fff
+                        font-weight: normal
+                        user-select: none
+                        -webkit-user-select: none
+                    > tbody > tr > td
+                        padding: 5px
+                        border: 2px solid #fff
+                        text-align: center
+                > .bottom
+                  box-sizing: border-box
+                  width: 8%
+                  animation: shake 2s infinite
+                  text-align: center
+                  margin-left: 45%
+                  display: inline-block
+                  height: 40px
+                > .top
+                  box-sizing: border-box
+                  width: 8%
+                  height: 40px
+                  animation: shake 2s infinite
+                  text-align: center
+                  margin-left: 45%
+
+
+

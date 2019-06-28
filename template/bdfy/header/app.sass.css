@@ -1,0 +1,49 @@
+body, dd, dl, fieldset, form, h1, h2, h3, h4, h5, h6, input, legend, ol, p, select, td, textarea, th, ul { margin: 0; padding: 0; border: 0; }
+
+html { overflow-x: hidden; overflow-y: visible; -ms-overflow-style: none; overflow: -moz-scrollbars-none; }
+
+html::-webkit-scrollbar { display: none; }
+
+li, ul { list-style: none; }
+
+a { color: white; }
+
+a:link { text-decoration: none; }
+
+a:visited { text-decoration: none; color: #0052D9; }
+
+a:hover { text-decoration: none; }
+
+a:active { text-decoration: none; color: #0052D9; }
+
+.layout:after, .hd:after, .bd:after, .ft:after, .cf:after { content: ""; display: table; clear: both; }
+
+.layout, .hd, .bd, .ft, .cf { *zoom: 1; }
+
+.layout { margin: 0 auto; width: 1000px; }
+
+.fl { float: left; }
+
+.fr { float: right; }
+
+.mt20 { margin-top: 20px; }
+
+.mt30 { margin-top: 30px; }
+
+img { border: none; }
+
+.front.laboratory-header { box-sizing: border-box; height: 100px; color: #ffffff; position: relative; }
+
+.front.laboratory-header .navbar { position: absolute; top: 50%; transform: translateY(-30%); display: inline-block; overflow: hidden; }
+
+.front.laboratory-header .navbar ul li { margin: 5px; font-size: 20px; font-weight: bold; float: left; cursor: pointer; }
+
+.front.laboratory-header .navbar ul .current { color: #0cd5b4; padding-bottom: 5px; transform: translateY(-5px); }
+
+.front.laboratory-header .navbar ul .tier { border-bottom: 5px solid #0cd5b4; }
+
+.front.laboratory-header .title { position: absolute; top: 50%; left: 50%; transform: translateX(-50%) translateY(-50%); color: #0cd5b4; font-size: 45px; font-weight: bold; }
+
+.front.laboratory-header .time { position: absolute; top: 30px; right: 160px; font-size: 32px; }
+
+.front.laboratory-header > img { z-index: 10; position: absolute; top: 5px; right: 10px; height: 100%; }

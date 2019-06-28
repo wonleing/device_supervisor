@@ -1,0 +1,75 @@
+body, dd, dl, fieldset, form, h1, h2, h3, h4, h5, h6, input, legend, ol, p, select, td, textarea, th, ul { margin: 0; padding: 0; border: 0; }
+
+html { overflow-x: hidden; overflow-y: visible; -ms-overflow-style: none; overflow: -moz-scrollbars-none; }
+
+html::-webkit-scrollbar { display: none; }
+
+li, ul { list-style: none; }
+
+a { color: white; }
+
+a:link { text-decoration: none; }
+
+a:visited { text-decoration: none; color: #0052D9; }
+
+a:hover { text-decoration: none; }
+
+a:active { text-decoration: none; color: #0052D9; }
+
+.layout:after, .hd:after, .bd:after, .ft:after, .cf:after { content: ""; display: table; clear: both; }
+
+.layout, .hd, .bd, .ft, .cf { *zoom: 1; }
+
+.layout { margin: 0 auto; width: 1000px; }
+
+.fl { float: left; }
+
+.fr { float: right; }
+
+.mt20 { margin-top: 20px; }
+
+.mt30 { margin-top: 30px; }
+
+img { border: none; }
+
+@font-face { font-family: 'iconfont'; src: url("//at.alicdn.com/t/font_868281_01w9isfeyi2n.eot"); src: url("//at.alicdn.com/t/font_868281_01w9isfeyi2n.eot?#iefix") format("embedded-opentype"), url("//at.alicdn.com/t/font_868281_01w9isfeyi2n.woff") format("woff"), url("//at.alicdn.com/t/font_868281_01w9isfeyi2n.ttf") format("truetype"), url("//at.alicdn.com/t/font_868281_01w9isfeyi2n.svg#iconfont") format("svg"); }
+
+@keyframes shake { from { transform: scale(1); }
+  50% { transform: scale(0.8); }
+  to { transform: scale(1); } }
+
+.BioLab_font.laboratory-page-warning { box-sizing: border-box; width: 1360px; height: 608px; background: #0d2a42; color: #fff; }
+
+.BioLab_font.laboratory-page-warning > .warn { width: 1296px; height: 608px; border: 2px #fff solid; margin: 0 auto; }
+
+.BioLab_font.laboratory-page-warning > .warn > .show { width: 1294px; height: 120px; border-bottom: 2px #fff solid; position: relative; }
+
+.BioLab_font.laboratory-page-warning > .warn > .show > .lamp { margin-bottom: 120px; display: inline-block; }
+
+.BioLab_font.laboratory-page-warning > .warn > .show .export { position: absolute; top: 15%; right: 0; box-sizing: border-box; width: 5%; height: 80px; text-align: center; font-size: 27px; color: white; }
+
+.BioLab_font.laboratory-page-warning > .warn > .show > .walist::-webkit-scrollbar { display: none; }
+
+.BioLab_font.laboratory-page-warning > .warn > .show > .walist { margin-top: 5px; display: inline-block; width: 1130px; height: 120px; position: relative; overflow-y: hidden; overflow-x: visible; white-space: nowrap; z-index: 5; }
+
+.BioLab_font.laboratory-page-warning > .warn > .show > .walist > #select { box-sizing: border-box; width: 307px; height: 103px; top: 0; left: 0; border: 3px solid #1e90ff; position: absolute; z-index: -1; }
+
+.BioLab_font.laboratory-page-warning > .warn > .show > .walist > dl { text-align: center; height: 96px; position: relative; margin: 3px 3px; cursor: pointer; width: 300px; border: 1px #0184b7 solid; overflow: hidden; display: inline-block; font-size: 24px; color: #fbb152; }
+
+.BioLab_font.laboratory-page-warning > .warn > .show > .walist > dl > dt { float: left; margin-left: 15px; line-height: 94px; }
+
+.BioLab_font.laboratory-page-warning > .warn > .show > .walist > dl > dd { margin-left: 5px; float: left; line-height: 94px; height: 94px; }
+
+.BioLab_font.laboratory-page-warning > .warn > .show > .walist > dl > dd > .scroll { width: 160px; height: 94px; }
+
+.BioLab_font.laboratory-page-warning > .warn > .record > .table { margin: 0; }
+
+.BioLab_font.laboratory-page-warning > .warn > .record > .table > table { width: 100%; border: 2px solid #fff; border-collapse: collapse; }
+
+.BioLab_font.laboratory-page-warning > .warn > .record > .table > table > thead > tr > th { text-align: center; padding: 5px; border: 2px solid #fff; font-weight: normal; user-select: none; -webkit-user-select: none; }
+
+.BioLab_font.laboratory-page-warning > .warn > .record > .table > table > tbody > tr > td { padding: 5px; border: 2px solid #fff; text-align: center; }
+
+.BioLab_font.laboratory-page-warning > .warn > .record > .table > .bottom { box-sizing: border-box; width: 8%; animation: shake 2s infinite; text-align: center; margin-left: 45%; display: inline-block; height: 40px; }
+
+.BioLab_font.laboratory-page-warning > .warn > .record > .table > .top { box-sizing: border-box; width: 8%; height: 40px; animation: shake 2s infinite; text-align: center; margin-left: 45%; }

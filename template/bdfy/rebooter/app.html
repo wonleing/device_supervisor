@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>BioLab_font - laboratory - rebooter</title>
+<link rel="stylesheet" charset="utf-8" href="./app.sass.css" />
+<link rel="stylesheet" charset="utf-8" href="../iconfont/app.sass.css" />
+</head>
+<body>
+
+  <div class="BioLab_font laboratory-rebooter" ng-if="inited" data-ng-init="ready()">
+      <div id="restart" ng-click="restart()"><img ng-class="current===1?'current':''" src="../static/images/restart.png" alt=""><p>重启</p></div>
+      <div id="shutdown" ng-click="shutdown()"><img ng-class="current===2?'current':''" src="../static/images/shutdown.png" alt=""><p>关机</p></div>
+  </div><!-- BioLab_font -->
+
+</body>
+</html>

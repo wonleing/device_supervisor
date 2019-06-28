@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>{{projectname}} - overview</title>
+<link rel="stylesheet" charset="utf-8" href="./app.sass.css" />
+<link rel="stylesheet" charset="utf-8" href="../iconfont/app.sass.css" />
+</head>
+<body>
+
+    <div class="front laboratory-page-overview" ng-if="inited">
+        <div class="content" data-ng-init="ready()">
+            <div class="img"><img src="../static/images/bg-0.gif" width="100%" alt=""></div>
+            <div class="left fl">
+                <ul>
+                    <li class="smallitem" ng-repeat="item in value.small">
+                        <div id="S{{item.id}}" class="fl"></div>
+                        <div class="fr">
+                            <div class="name">{{item.name}}<div class="status" ng-style="{background:item.data.color}" ></div></div>
+                            <div class="value">液位: <span class="number timer">{{item.data.height}}</span> mm</div>
+                            <div class="value">充装状态: <span class="string">{{item.data.valve}}</span></div>
+                            <div class="value">罐口温度: <span class="number timer">{{item.data.temp1}}</span> ℃</div>
+                            <div class="value">盖子状态: <span class="string">{{item.data.lid}}</span></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="right fr">
+                <div class="pipe" ng-repeat="item in value.gd">
+                    <div class="name">{{item.name}}<div class="status" ng-style="{background:item.data.color}" ></div></div>
+                    <div class="value">压力: <span class="number timer">{{item.data.pressure}}</span> MPa</div>
+                    <div class="value">温度: <span class="number timer">{{item.data.temp1}}</span> ℃</div>
+                    <div class="value">发散状态: <span class="string">{{item.data.release}}</span></div>
+                </div>
+                <ul>
+                    <li ng-repeat="item in value.swg">
+                        <div class="name">{{item.name}}<div class="status" ng-style="{background:item.data.color}" ></div></div>
+                        <div class="value">温度: <span class="number timer">{{item.data.temp1}}</span> ℃</div>
+                        <div class="value">充装状态: <span class="string">{{item.data.valve}}</span></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="center fl">
+                <ul>
+                    <li ng-repeat="item in value.tower">
+                        <div class="fl">
+                            <div class="Tper">{{item.data.per}}%</div>
+                            <div id="T{{item.id}}"></div>
+                        </div>
+                        <div class="fr">
+                            <div class="name">{{item.name}}<div class="status" ng-style="{background:item.data.color}" ></div></div>
+                            <div class="value">储罐液位: <span class="number timer">{{item.data.height}}</span> mm</div>
+                            <div class="value">罐内压力: <span class="number timer">{{item.data.pressure}}</span> MPa</div>
+                            <div class="value">储液重量: ～<span class="number timer">{{item.data.weight}}</span> KG</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottom">
+                <ul>
+                    <li ng-repeat="item in value.bx">
+                        <div class="refrigerator">
+                            <div class="name">{{item.name}}<div class="status" ng-style="{background:item.data.color}" ></div></div>
+                            <div class="value"><span class="number timer">{{item.data.temp1}}</span> ℃</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div><!-- front -->
+
+</body>
+</html>
